@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individuell examination</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&family=Outfit&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    
     <header class="header">
         <nav class="header__navbar">
             <img src="assets/zocom.svg" class="header__logo" alt="Zocom-logo">
             <ul class="header__navbar-ul">
-                <li class="header__navbar-li">HOME</li>
-                <li class="header__navbar-li">HOW IT WORKS</li>
-                <li class="header__navbar-li"> FEATURES</li>
-                <li class="header__navbar-li">PRESS</li>
-                <li class="header__navbar-li">PRICING</li>
-                <li class="header__navbar-li">CONTACT</li>
+                <li class="header__navbar-li"><a class="nav__link nav__link--active" href="#">HOME</li>
+                <li class="header__navbar-li"><a class="nav__link" href="#"></a>HOW IT WORKS</li>
+                <li class="header__navbar-li"><a class="nav__link" href="#"></a>FEATURES</li>
+                <li class="header__navbar-li"><a class="nav__link" href="#"></a>PRESS</li>
+                <li class="header__navbar-li"><a class="nav__link" href="#"></a>PRICING</li>
+                <li class="header__navbar-li"><a class="nav__link" href="#"></a>CONTACT</li>
             </ul>
             <p class="header__quote">GET A QUOTE</p>
+            <img src="assets/ham-menu.svg" alt="burger-menu" class="ham-menu">
         </nav>
     <section class="hero">
-        <h1 class="hero__headertext">Download our App</h1>
+        <h1 class="h1-text">Download our App</h1>
         <p class="hero__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel <br> eleifend diam, tempus accumsan neque. Praesent quis dolor.</p>
         <div class="hero__buttons">
             <img src="assets/Appstore.svg" alt="Appstore-button" class="hero__button">
@@ -33,52 +39,65 @@
 
     <main>
 
-        <h1 class="main__headertext">Our products</h1>
+        <h1 class="h1-text">Our products</h1>
 
         <section class="content-wrapper">
 
             <article class="content-wrapper__card">
-                <img class="content-wrapper__card__img" src="assets/pexels-1484807.jpg" alt="green-cap" >
+                <img class="content-wrapper__card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <div class="card-wrapper__text">
                 <h3 class="content-wrapper__card__title">Green Cap</h3>
                 <p class="content-wrapper__card__price">US$29</p>
+            </div>
             </article>
 
             <article class="content-wrapper__card">
-                <img class="content-wrapper__card__img" src="assets/pexels-7319172.jpg" alt="zara-tshirt" >
+                <img class="content-wrapper__card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <div class="card-wrapper__text">
                 <h3 class="content-wrapper__card__title">Zara shirt</h3>
                 <p class="content-wrapper__card__price">US$19.90</p>
+            </div>
             </article>
 
             <article class="content-wrapper__card">
-                <img class="content-wrapper__card__img" src="assets/pexels-9869141.jpg" alt="-nike-shoes" >
+                <img class="content-wrapper__card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <div class="card-wrapper__text">
                 <h3 class="content-wrapper__card__title">Nike Air</h3>
                 <p class="content-wrapper__card__price">US$34</p>
+            </div>
             </article>
 
             <article class="content-wrapper__card">
-                <img class="content-wrapper__card__img" src="assets/pexels-2364575.jpg" alt="nerd-tshirt" >
+                <img class="content-wrapper__card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <div class="card-wrapper__text">
                 <h3 class="content-wrapper__card__title">Nerd tshirt</h3>
                 <p class="content-wrapper__card__price">US$9.99</p>
+            </div>
             </article>
 
-            <article class="content-wrapper__card content-wrapper__card--big">
-                <h2>COLLECTION</h2>
-                <h4>Summer 2021</h4>
-                <button>CHECK IT OUT</button>
+            <article class="content-wrapper__card content-wrapper__card--left">
+            <div class="content-wrapper__card__inner">
+                <h2 class="content-wrapper__card__headtitle">COLLECTION</h2>
+                <h4 class="content-wrapper__card__subtitle">Summer 2021</h4>
+                <button class="content-wrapper__card__button">CHECK IT OUT</button>
+            </div>
             </article>
 
-            <article class="content-wrapper__card content-wrapper__card--big">
-                <h2>COLLECTION</h2>
-                <h4>Summer 2021</h4>
-                <button>CHECK IT OUT</button>
+            <article class="content-wrapper__card content-wrapper__card--right">
+            <div class="content-wrapper__card__inner">
+                <h2 class="content-wrapper__card__headtitle">COLLECTION</h2>
+                <h4 class="content-wrapper__card__subtitle">Summer 2021</h4>
+                <button class="content-wrapper__card__button">CHECK IT OUT</button>
+            </div>
             </article>
-
         </section>
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+            <section class="footer__contact">
+                <h2>Contact us</h2>
+            </section>
     </footer>
 </body>
 </html>
