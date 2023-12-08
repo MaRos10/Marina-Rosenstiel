@@ -13,15 +13,15 @@
 <body>
     
     <header class="header">
-        <nav class="header__navbar">
+        <nav class="header__nav">
             <img src="assets/zocom.svg" class="header__logo" alt="Zocom-logo">
-            <ul class="header__navbar-ul">
-                <li class="header__navbar-li">HOME</li>
-                <li class="header__navbar-li">HOW IT WORKS</li>
-                <li class="header__navbar-li">FEATURES</li>
-                <li class="header__navbar-li">PRESS</li>
-                <li class="header__navbar-li">PRICING</li>
-                <li class="header__navbar-li">CONTACT</li>
+            <ul class="header__nav-ul">
+                <li class="header__nav-li">HOME</li>
+                <li class="header__nav-li">HOW IT WORKS</li>
+                <li class="header__nav-li">FEATURES</li>
+                <li class="header__nav-li">PRESS</li>
+                <li class="header__nav-li">PRICING</li>
+                <li class="header__nav-li">CONTACT</li>
             </ul>
             <p class="header__quote">GET A QUOTE</p>
             <img src="assets/ham-menu.svg" alt="burger-menu" class="ham-menu">
@@ -37,63 +37,63 @@
     </section>
     </header>
 
-    <main class="products"> <!-- fixa till BEM -->
+    <main class="products"> 
 
         <h1 class="products__h1">Our products</h1>
 
-        <section class="content-wrapper">
+        <section class="card-wrapper">
 
-            <article class="content-wrapper__card" >
-                <div class="content-wrapper__inner">
-                <img class="content-wrapper__img" src="assets/image-placeholder.svg" alt="placeholder" >
-                <h3 class="content-wrapper__card-title">Green Cap</h3>
-                <p class="content-wrapper__card-price">US$29</p>
+            <article class="card">
+                <div class="card__inner">
+                <img class="card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <h3 class="card__product">Green Cap</h3>
+                <p class="card__price">US$29</p>
             </div>
             </article>
 
-            <article class="content-wrapper__card" >
-                <div class="content-wrapper__inner">
-                <img class="content-wrapper__img" src="assets/image-placeholder.svg" alt="placeholder" >
-                <h3 class="content-wrapper__card-title">Zara shirt</h3>
-                <p class="content-wrapper__card-price">US$19.90</p>
+            <article class="card">
+                <div class="card__inner">
+                <img class="card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <h3 class="card__product">Zara shirt</h3>
+                <p class="card__price">US$19.90</p>
             </div>
             </article>
 
-            <article class="content-wrapper__card" >
-                <div class="content-wrapper__inner">
-                <img class="content-wrapper__img" src="assets/image-placeholder.svg" alt="placeholder" >
-                <h3 class="content-wrapper__card-title">Nike Air</h3>
-                <p class="content-wrapper__card-price">US$34</p>
+            <article class="card">
+                <div class="card__inner">
+                <img class="card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <h3 class="card__product">Nike Air</h3>
+                <p class="card__price">US$34</p>
             </div>
             </article>
 
-            <article class="content-wrapper__card" >
-                <div class="content-wrapper__inner">
-                <img class="content-wrapper__img" src="assets/image-placeholder.svg" alt="placeholder" >
-                <h3 class="content-wrapper__card-title">Nerd tshirt</h3>
-                <p class="content-wrapper__card-price">US$9.99</p>
+            <article class="card">
+                <div class="card__inner">
+                <img class="card__img" src="assets/image-placeholder.svg" alt="placeholder" >
+                <h3 class="card__product">Nerd tshirt</h3>
+                <p class="card__price">US$9.99</p>
             </div>
             </article>
 
-            <article class="content-wrapper__card--big" id="card-left">
-            <div class="content-wrapper__big-inner">
-                <h2 class="content-wrapper__card-headtitle">COLLECTION</h2>
-                <h4 class="content-wrapper__card-subtitle">Summer 2021</h4>
-                <button class="content-wrapper__card-button">CHECK IT OUT</button>
+            <article class="card card--big" id="card-left">
+            <div class="card__inner card__inner--big">
+                <h2 class="card__headtitle">COLLECTION</h2>
+                <h4 class="card__subtitle">Summer 2021</h4>
+                <button class="card__button">CHECK IT OUT</button>
             </div>
             </article>
 
-            <article class="content-wrapper__card--big" id="card-right">
-            <div class="content-wrapper__big-inner">
-                <h2 class="content-wrapper__card-headtitle">COLLECTION</h2>
-                <h4 class="content-wrapper__card-subtitle">Summer 2021</h4>
-                <button class="content-wrapper__card-button">CHECK IT OUT</button>
+            <article class="card card--big" id="card-right">
+            <div class="card__inner card__inner--big">
+                <h2 class="card__headtitle">COLLECTION</h2>
+                <h4 class="card__subtitle">Summer 2021</h4>
+                <button class="card__button">CHECK IT OUT</button>
             </div>
             </article>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer"> <!-- fixa till BEM -->
         <form class="footer__contact">
             <h2 class="contact__header">Contact us</h2> <br>
             <h3 class="contact__subheader">We'd love to hear from you</h3>

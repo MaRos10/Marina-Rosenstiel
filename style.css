@@ -16,7 +16,7 @@ body{
     background-color: #EEE;
 }
 
-.header__navbar {
+.header__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,13 +24,13 @@ body{
     padding: 2em 2%;
 }
 
-.header__navbar-ul {
+.header__nav-ul {
     display: flex;
     flex-direction: row;
     gap: 48px;
 }
 
-.header__navbar-li {
+.header__nav-li {
     list-style: none;
     color: #999;
     font-size: 12px;
@@ -100,7 +100,7 @@ section.hero {
     text-align: center;
 }
 
-.content-wrapper {
+.card-wrapper {
     display: grid;
     grid-template-areas: 
     "small small small small"
@@ -111,31 +111,31 @@ section.hero {
 
 /*    SMALL CARDS    */
 
-.content-wrapper__card{
+.card{
     width: 350px;
     height: 100%;
     background-color: #EBEBEB;
     border-radius: 3px;
     }
 
-.content-wrapper__inner {
+.card__inner {
         text-align: center;
         padding-top: 4rem;
     }
 
-.content-wrapper__img {
+.card__img {
     width: 100px;
     height: 100px;
 }
 
-.content-wrapper__card-title {
+.card__product {
     color: black;
     font-size: 22px;
     text-wrap: nowrap;
     padding-top: 6rem; /* obs */
 }
 
-.content-wrapper__card-price{
+.card__price {
     color: rgba(0, 0, 0, 0.80);
     font-size: 16px;
     line-height: 2;
@@ -144,13 +144,14 @@ section.hero {
 
 /*    BIG CARDS    */
 
-.content-wrapper__card--big {
+.card--big {
     background-color: #343332;
     color: white;
     /*height: 25vh; */
     border-radius: 3px;
     margin-top: 40px;
     height: 350px;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -165,21 +166,21 @@ section.hero {
     grid-area: bigtwo;
 }
 
-.content-wrapper__big-inner {
-    text-align: center; 
+.card__inner--big {
+    padding-top: 0;
 }
 
-.content-wrapper__card-headtitle {
+.card__headtitle {
     font-size: 32px;
 } 
 
-.content-wrapper__card-subtitle {
+.card__subtitle {
     color: rgba(255, 255, 255, 0.60);
     font-size: 18px;
     padding: 0.5rem 0 1.5rem 0;
 }
 
-.content-wrapper__card-button {
+.card__button {
     padding: 1rem;
     background: #343332;
     color: rgba(255, 255, 255, 0.60);
@@ -288,7 +289,7 @@ label {
 }
 
 /*    SMALL CARDS    */
-.content-wrapper__img {
+.card__img {
     animation: rotate 3s ease infinite alternate;     
 }
 
@@ -302,7 +303,7 @@ label {
 }
 
 /*    CHECK IT OUT-button on big card    */
-.content-wrapper__card-button {
+.card__button {
     transition: transform 0.7s ease-in-out;
 
     &:hover {
@@ -313,7 +314,7 @@ label {
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media only screen and (max-width: 600px) {
-    .header__navbar-ul,
+    .header__nav-ul,
     .header__quote {
         display: none;
     }
@@ -335,7 +336,7 @@ label {
         display: none;
     }
 
-    .content-wrapper{
+    .card-wrapper{
         display: grid;
         grid-template-areas: 
         "small small"
@@ -349,12 +350,13 @@ label {
         padding-bottom: 100px;
     }
 
-    .content-wrapper__card {
+    .card {
         width: 150px;
     }
 
-    .content-wrapper__card--big {
+    .card--big {
         height: 200px;
+        width: 100%;
     }
 
     .footer {
