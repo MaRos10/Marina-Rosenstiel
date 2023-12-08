@@ -8,9 +8,9 @@ body{
     font-family: 'Fira Sans', sans-serif;
 }
 
-/* ---------- HEADER ---------- */
+/* ------------------ HEADER ------------------ */
 
-/* -- NAVBAR -- */
+/*    NAVBAR    */
 
 .header {
     background-color: #EEE;
@@ -46,17 +46,14 @@ body{
     border-radius: 3px;
     font-size: 12px;
     padding: 0.5rem 1.5rem;
-    cursor: pointer;
-    /*transition: .2s ease-in-out;
-    
-    &:hover { transform: scale(1.04); }   /* ---- ANIMATION QUOTE-BUTTON -----*/ 
+    cursor: pointer; 
 }
 
 .ham-menu {
     display: none;
 }
 
-/* -- HERO -- */
+/*    HERO    */
 
 section.hero {
     background-color: #EEE;
@@ -64,6 +61,12 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.hero__h1 {
+    font-size: 53px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .hero__paragraph {
@@ -79,42 +82,22 @@ section.hero {
     cursor: pointer;
     appearance: none;
     border: none;
-
-    /*transition: .2s ease-in-out;
-    
-    &:hover { transform: scale(1.04); } */
 }
 
-
-/* H1 - hero, main */
-.h1-text {
-    font-size: 53px;
-    text-align: center;
-}
-
-/* ---------- ANIMATIONS ---------- */
-
-.header__quote,
-.hero__button, 
-.form__input__submit
-{
-    transition: .2s ease-in-out;
-    
-    &:hover { transform: scale(1.04); } 
-}
-
-
-/* ---------- MAIN ---------- */
-
-main .h1-text {
-    padding-top: 7rem;
-}
+/* ------------------ MAIN ------------------ */
 
 .products{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.products__h1 {
+    padding-top: 6rem;
+    font-size: 53px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .content-wrapper {
@@ -126,7 +109,7 @@ main .h1-text {
     margin: 40px auto; 
     }
 
-/* -- SMALL CARDS -- */
+/*    SMALL CARDS    */
 
 .content-wrapper__card{
     width: 350px;
@@ -143,24 +126,13 @@ main .h1-text {
 .content-wrapper__img {
     width: 100px;
     height: 100px;
-
-    animation: rotate 3s ease infinite alternate;     /* ANIMATION SMALL CARDS */
-}
-
-@keyframes rotate {                    
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .content-wrapper__card-title {
     color: black;
     font-size: 22px;
     text-wrap: nowrap;
-    
+    padding-top: 6rem; /* obs */
 }
 
 .content-wrapper__card-price{
@@ -170,7 +142,7 @@ main .h1-text {
 }
 
 
-/* -- BIG CARDS -- */
+/*    BIG CARDS    */
 
 .content-wrapper__card--big {
     background-color: #343332;
@@ -197,10 +169,13 @@ main .h1-text {
     text-align: center; 
 }
 
+.content-wrapper__card-headtitle {
+    font-size: 32px;
+} 
+
 .content-wrapper__card-subtitle {
     color: rgba(255, 255, 255, 0.60);
     font-size: 18px;
-    font-weight: 200;
     padding: 0.5rem 0 1.5rem 0;
 }
 
@@ -212,14 +187,9 @@ main .h1-text {
     border-radius: 3px;
     border: 1px solid rgba(255, 255, 255, 0.60);
     cursor: pointer;
-    transition: transform 0.7s ease-in-out;
-
-    &:hover {
-        transform: rotate(360deg);    /* ANIMATION CHECK OUT BUTTON */
-    }
 }
 
-/* ---------- FOOTER ---------- */
+/* ------------------ FOOTER ------------------ */
 
 .footer {
     background-image: url(assets/footer-map.png);
@@ -234,7 +204,7 @@ main .h1-text {
     justify-content: flex-end;     
 }
 
-/* -- CONTACT TEXT -- */
+/*    CONTACT TEXT    */
 
 .footer__contact {
     display: flex;
@@ -247,6 +217,7 @@ main .h1-text {
 .contact__header {
     font-size: 53px;
     text-align: left;
+    font-weight: 600;
 }
 
 .contact__subheader {
@@ -261,7 +232,7 @@ main .h1-text {
     padding-bottom: 1rem;
 }
 
-/* -- CONTACTFORM -- */
+/*    CONTACT FORM    */
 
 .contact-form {
     padding: 0.7rem 0;
@@ -302,13 +273,44 @@ label {
     cursor: pointer;
     font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
-
-    /*transition: .2s ease-in-out;
-    
-    &:hover { transform: scale(1.04); }   /* ---- ANIMATION SEND-BUTTON -----*/
 }
 
-/* ---------- MEDIA QUERIES ---------- */
+/* ------------------ ANIMATIONS ------------------ */
+
+/*    CTA-buttons    */
+.header__quote,
+.hero__button, 
+.form__input__submit
+{
+    transition: .2s ease-in-out;
+    
+    &:hover { transform: scale(1.04); } 
+}
+
+/*    SMALL CARDS    */
+.content-wrapper__img {
+    animation: rotate 3s ease infinite alternate;     
+}
+
+@keyframes rotate {                    
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*    CHECK IT OUT-button on big card    */
+.content-wrapper__card-button {
+    transition: transform 0.7s ease-in-out;
+
+    &:hover {
+        transform: rotate(360deg);   
+    }
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
 
 @media only screen and (max-width: 600px) {
     .header__navbar-ul,
@@ -318,6 +320,19 @@ label {
 
     .ham-menu {
         display: block;
+    }
+
+    .hero__h1 {
+        font-size: 40px;
+        text-wrap: nowrap;
+    }
+
+    .hero__paragraph {
+        padding: 1.5rem;
+    }
+
+    .hero__paragraph br {
+        display: none;
     }
 
     .content-wrapper{
@@ -336,6 +351,10 @@ label {
 
     .content-wrapper__card {
         width: 150px;
+    }
+
+    .content-wrapper__card--big {
+        height: 200px;
     }
 
     .footer {
