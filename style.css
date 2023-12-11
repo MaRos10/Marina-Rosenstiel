@@ -34,11 +34,11 @@ body{
     list-style: none;
     color: #999;
     font-size: 12px;
+}
 
-    &:hover {
-        cursor: pointer;
-        color: black;
-    }
+.header__nav-li:hover {
+    cursor: pointer;
+    color: black;
 }
 
 .header__quote {
@@ -80,7 +80,6 @@ section.hero {
 .hero__button {
     padding: 2rem 1rem;
     cursor: pointer;
-    appearance: none;
     border: none;
 }
 
@@ -94,7 +93,8 @@ section.hero {
 }
 
 .products__h1 {
-    padding-top: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     font-size: 53px;
     font-weight: 600;
     text-align: center;
@@ -105,9 +105,9 @@ section.hero {
     grid-template-areas: 
     "small small small small"
     "bigone bigone bigtwo bigtwo";
-    gap: 2rem;
+    gap: 1rem;
     margin: 40px auto; 
-    }
+}
 
 /*    SMALL CARDS    */
 
@@ -116,12 +116,12 @@ section.hero {
     height: 100%;
     background-color: #EBEBEB;
     border-radius: 3px;
-    }
+}
 
 .card__inner {
-        text-align: center;
-        padding-top: 4rem;
-    }
+    text-align: center;
+    padding-top: 4rem;
+}
 
 .card__img {
     width: 100px;
@@ -147,11 +147,10 @@ section.hero {
 .card--big {
     background-color: #343332;
     color: white;
-    /*height: 25vh; */
     border-radius: 3px;
-    margin-top: 40px;
     height: 350px;
     width: 100%;
+    margin-top: 1.5rem;
 
     display: flex;
     flex-direction: column;
@@ -246,14 +245,14 @@ input[type="text"], [type="email"], [type="tel"] {
     border-radius: 3px;
     box-shadow: 1px 1px 3px 3px rgba(20, 2, 2, 0.08);
     padding: 0.5rem;
+}
 
-    &:hover {
-        box-shadow: 1px 1px 3px 3px rgba(20, 2, 2, 0.6);
-    }
+input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover {
+    box-shadow: 1px 1px 3px 3px rgba(20, 2, 2, 0.6);
+}
 
-    &:focus {
-        background-color: #f9f4f4;
-    }
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    background-color: #f9f4f4;
 }
 
 label {
@@ -284,9 +283,14 @@ label {
 .form__input__submit
 {
     transition: .2s ease-in-out;
-    
-    &:hover { transform: scale(1.04); } 
 }
+
+.header__quote:hover,
+.hero__button:hover,
+.form__input__submit:hover {
+    transform: scale(1.04);
+}
+
 
 /*    SMALL CARDS    */
 .card__img {
@@ -305,10 +309,10 @@ label {
 /*    CHECK IT OUT-button on big card    */
 .card__button {
     transition: transform 0.7s ease-in-out;
+}
 
-    &:hover {
-        transform: rotate(360deg);   
-    }
+.card__button:hover {
+    transform: rotate(360deg);  
 }
 
 /* ------------------ MEDIA QUERIES ------------------ */
@@ -344,14 +348,12 @@ label {
         "bigone bigone"
         "bigtwo bigtwo";
         gap: 12px;
-        padding: 20px;
         margin: 0 auto;
-    
         padding-bottom: 100px;
     }
 
     .card {
-        width: 150px;
+        width: 170px;
     }
 
     .card--big {
@@ -363,5 +365,9 @@ label {
         display: flex;
         justify-content: center;
         padding: 4rem 1rem;
+    }
+
+    .contact__info br {
+        display: none;
     }
 } 
