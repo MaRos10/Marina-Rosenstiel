@@ -73,7 +73,7 @@ section.hero {
     font-size: 16px;
     color: rgba(34, 34, 34, 0.80);
     line-height: 150%;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -93,8 +93,7 @@ section.hero {
 }
 
 .products__h1 {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    padding: 5rem 0 2rem 0;
     font-size: 53px;
     font-weight: 600;
     text-align: center;
@@ -107,6 +106,7 @@ section.hero {
     "bigone bigone bigtwo bigtwo";
     gap: 1rem;
     margin: 40px auto; 
+    padding-bottom: 4rem;
 }
 
 /*    SMALL CARDS    */
@@ -132,7 +132,7 @@ section.hero {
     color: black;
     font-size: 22px;
     text-wrap: nowrap;
-    padding-top: 6rem; /* obs */
+    padding-top: 6rem; 
 }
 
 .card__price {
@@ -145,22 +145,23 @@ section.hero {
 /*    BIG CARDS    */
 
 .card--big {
-    background-color: #343332;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #343332;
     color: white;
     border-radius: 3px;
     height: 350px;
     width: 100%;
     margin-top: 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #card-left {
     grid-area: bigone;
 }
+
 #card-right {
     grid-area: bigtwo;
 }
@@ -180,12 +181,12 @@ section.hero {
 }
 
 .card__button {
-    padding: 1rem;
     background: #343332;
     color: rgba(255, 255, 255, 0.60);
-    font-size: 12px;
     border-radius: 3px;
+    font-size: 12px;
     border: 1px solid rgba(255, 255, 255, 0.60);
+    padding: 1rem;
     cursor: pointer;
 }
 
@@ -196,12 +197,12 @@ section.hero {
     background-position: center;
     background-size: cover;
 
-    color: black;
-    height: 600px;
-    padding: 2rem 15rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;     
+    justify-content: flex-end; 
+    color: black;
+    height: 600px;
+    padding: 2rem 15rem;    
 }
 
 /*    CONTACT TEXT    */
@@ -238,7 +239,7 @@ section.hero {
     padding: 0.7rem 0;
 }
 
-input[type="text"], [type="email"], [type="tel"] {
+input[type="text"],[type="email"], [type="tel"] {
     width: 100%;
     outline: none;
     border: none;
@@ -264,9 +265,9 @@ label {
     justify-content: flex-end;
 }
 
-.form__input__submit {
+.submit__input {
     border: none;
-    background-color: 999;
+    background-color: #EBEBEB;
     padding: 0.5rem 2.5rem;
     border-radius: 3px;
     box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);
@@ -280,14 +281,14 @@ label {
 /*    CTA-buttons    */
 .header__quote,
 .hero__button, 
-.form__input__submit
+.submit__input
 {
     transition: .2s ease-in-out;
 }
 
 .header__quote:hover,
 .hero__button:hover,
-.form__input__submit:hover {
+.submit__input:hover {
     transform: scale(1.04);
 }
 
@@ -318,6 +319,10 @@ label {
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media only screen and (max-width: 600px) {
+    .header__nav {
+        padding: 2em 4%;
+    }
+    
     .header__nav-ul,
     .header__quote {
         display: none;
