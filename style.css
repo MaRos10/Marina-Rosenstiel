@@ -8,6 +8,8 @@ body{
     font-family: 'Fira Sans', sans-serif;
 }
 
+
+
 /* ------------------ HEADER ------------------ */
 
 /*    NAVBAR    */
@@ -67,6 +69,7 @@ section.hero {
     font-size: 53px;
     text-align: center;
     font-weight: 600;
+    padding-top: 1.5rem;
 }
 
 .hero__paragraph {
@@ -83,6 +86,8 @@ section.hero {
     border: none;
 }
 
+
+
 /* ------------------ MAIN ------------------ */
 
 .products{
@@ -93,7 +98,7 @@ section.hero {
 }
 
 .products__h1 {
-    padding: 5rem 0 2rem 0;
+    padding: 6.5rem 0 2rem 0;
     font-size: 53px;
     font-weight: 600;
     text-align: center;
@@ -104,7 +109,7 @@ section.hero {
     grid-template-areas: 
     "small small small small"
     "bigone bigone bigtwo bigtwo";
-    gap: 1rem;
+    gap: 1.4rem;
     margin: 40px auto; 
     padding-bottom: 4rem;
 }
@@ -112,8 +117,8 @@ section.hero {
 /*    SMALL CARDS    */
 
 .card{
-    width: 350px;
-    height: 100%;
+    width: 250px;
+    height: 360px; 
     background-color: #EBEBEB;
     border-radius: 3px;
 }
@@ -153,7 +158,7 @@ section.hero {
     background: #343332;
     color: white;
     border-radius: 3px;
-    height: 350px;
+    height: 360px;
     width: 100%;
     margin-top: 1.5rem;
 }
@@ -177,6 +182,7 @@ section.hero {
 .card__subtitle {
     color: rgba(255, 255, 255, 0.60);
     font-size: 18px;
+    font-weight: 300;
     padding: 0.5rem 0 1.5rem 0;
 }
 
@@ -189,6 +195,8 @@ section.hero {
     padding: 1rem;
     cursor: pointer;
 }
+
+
 
 /* ------------------ FOOTER ------------------ */
 
@@ -239,7 +247,7 @@ section.hero {
     padding: 0.7rem 0;
 }
 
-input[type="text"],[type="email"], [type="tel"] {
+input[type="text"], [type="email"], [type="tel"] {
     width: 100%;
     outline: none;
     border: none;
@@ -248,11 +256,15 @@ input[type="text"],[type="email"], [type="tel"] {
     padding: 0.5rem;
 }
 
-input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover {
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="tel"]:hover {
     box-shadow: 1px 1px 3px 3px rgba(20, 2, 2, 0.6);
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus {
     background-color: #f9f4f4;
 }
 
@@ -276,13 +288,14 @@ label {
     font-family: 'Fira Sans', sans-serif;
 }
 
+
+
 /* ------------------ ANIMATIONS ------------------ */
 
 /*    CTA-buttons    */
 .header__quote,
 .hero__button, 
-.submit__input
-{
+.submit__input {
     transition: .2s ease-in-out;
 }
 
@@ -316,9 +329,13 @@ label {
     transform: rotate(360deg);  
 }
 
+
+
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media only screen and (max-width: 600px) {
+
+    /*    NAV AND HERO   */
     .header__nav {
         padding: 2em 4%;
     }
@@ -345,6 +362,11 @@ label {
         display: none;
     }
 
+    .hero__button {
+        padding-bottom: 3rem;
+    }
+
+    /*    MAIN    */
     .card-wrapper{
         display: grid;
         grid-template-areas: 
@@ -359,13 +381,15 @@ label {
 
     .card {
         width: 170px;
+        height: 320px;
     }
 
     .card--big {
-        height: 200px;
         width: 100%;
+        height: 250px;
     }
 
+    /*    FOOTER    */
     .footer {
         display: flex;
         justify-content: center;
