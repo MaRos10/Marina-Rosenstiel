@@ -335,7 +335,7 @@ label {
 
 @media only screen and (max-width: 600px) {
 
-    /*    NAV AND HERO   */
+    /*    NAVBAR AND HERO   */
     .header__nav {
         padding: 2em 4%;
     }
@@ -367,6 +367,10 @@ label {
     }
 
     /*    MAIN    */
+    .products__h1 {
+        padding-top: 2rem;
+        font-size: 45px;
+    }
     .card-wrapper{
         display: grid;
         grid-template-areas: 
